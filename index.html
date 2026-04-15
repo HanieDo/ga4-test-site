@@ -1,21 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center; /* horizontal */
-      align-items: center;     /* vertical */
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      text-align: center;
-    }
-  </style>
-  <title>GA4 Test Site</title>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -23,20 +8,161 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-KJRK5TWK');</script>
   <!-- End Google Tag Manager -->
+  
+  <meta charset="UTF-8">
+  <title>Goedemorgen Agent-P!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #1a1a1a;
+      background: #f5f7fa;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #4f46e5, #06b6d4);
+      color: white;
+    }
+
+    .container {
+      max-width: 700px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #4f46e5;
+      font-weight: bold;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #4f46e5;
+    }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+      background: white;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .features {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .feature {
+      background: #f0f2f5;
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+    }
+  </style>
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJRK5TWK"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <h1>Goedemorgen Thính giả Xì Gòn 👋</h1>
-  <p>This is Nhà đài HL test website for GA4 demo. </p>
-  <p>Cool huh :> </p>
-  <p>Tada tada tada... </p>
 
-  <button onclick="gtag('event', 'click_test_button')">
-    Explore Mind Cave!🧠
-  </button>
-  
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <h1>🚀</h1>
+      <p>
+        This is Wat-N test website for GA4 demo.
+        Cool huh :>
+      </p>
+
+      <div class="buttons">
+        <button class="btn btn-primary"
+          onclick="gtag('event', 'cta_click', {label: 'get_started'})">
+          Vào Cave Mind nào!
+        </button>
+
+        <button class="btn btn-secondary"
+          onclick="gtag('event', 'cta_click', {label: 'learn_more'})">
+          Tadaa ta da...
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="section">
+    <h2>Why This Page?</h2>
+    <p>Use this layout to generate meaningful analytics data.</p>
+
+    <div class="features">
+      <div class="feature">📊 Track page views</div>
+      <div class="feature">📜 Track scroll depth</div>
+      <div class="feature">🔗 Track clicks</div>
+    </div>
+  </section>
+
+  <!-- OUTBOUND LINK SECTION -->
+  <section class="section">
+    <h2>Test Outbound Click</h2>
+    <p>Click below to test outbound link tracking.</p>
+
+    <a href="https://example.com" target="_blank"
+       onclick="gtag('event', 'outbound_click', {link_url: this.href})">
+      Visit External Site
+    </a>
+  </section>
+
 </body>
 </html>
